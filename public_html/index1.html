@@ -23,9 +23,9 @@
                         <th>&nbsp;</th>
                     </tr>
                     <tr>
-                        <th><input type="text" class="form-control"/></th>
-                        <th><input type="text" class="form-control"/></th>
-                        <th><input type="text" class="form-control"/></th>
+                        <th><input ng-model="movie.title" type="text" class="form-control"/></th>
+                        <th><input ng-model="movie.year" type="text" class="form-control"/></th>
+                        <th><input ng-model="movie.plot" type="text" class="form-control"/></th>
                         <th>
                             <button ng-click="addMovie()" class="btn btn-success">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
