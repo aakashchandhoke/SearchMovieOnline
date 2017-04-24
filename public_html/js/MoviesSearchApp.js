@@ -2,7 +2,19 @@ var app=angular.module('MoviesApp', []);
 
 app.controller("MovieController",function ($scope,$http) {
     var movies=[];
+    var favouriteMovies=[];
     $scope.movies=movies;
+    $scope.favouriteMovies=favouriteMovies;
+    //Fav movies function
+    $scope.removeFavouriteMovie=function(movie){
+        var index=$scope.favouriteMovies.indexOf(movie);
+        $scope.favouriteMovies.splice(index,1);
+    };
+    $scope.addFavourite=function(movie){
+      $scope.favouriteMovies.push(movie);
+      console.log(favouriteMovies);
+    };
+    //Movies function
     $scope.removeMovie=function(movie){
         var index=$scope.movies.indexOf(movie);
         $scope.movies.splice(index,1);
